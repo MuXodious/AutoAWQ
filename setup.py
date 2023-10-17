@@ -5,9 +5,6 @@ from setuptools import setup, find_packages
 from distutils.sysconfig import get_python_lib
 from torch.utils.cpp_extension import BuildExtension, CUDA_HOME, CUDAExtension
 
-os.environ["CC"] = "g++"
-os.environ["CXX"] = "g++"
-
 common_setup_kwargs = {
     "version": "0.1.4",
     "name": "autoawq",
