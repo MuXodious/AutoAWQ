@@ -46,7 +46,10 @@ CUDA dependencies can be hard to manage sometimes. It is recommended to use cond
 ```
 conda create --name autoawq python=3.10 -y
 conda activate autoawq
-conda install pytorch=2.0.1 torchvision torchaudio cudatoolkit=11.8 -c pytorch -c nvidia
+conda install -c "nvidia/label/cuda-12.1.1" cuda-toolkit
+conda install -c "nvidia/label/cuda-12.1.1" cuda-nvcc
+conda install conda-build gcc_linux-64 gxx_linux-64 gfortran_linux-64
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install autoawq
 ```
 
